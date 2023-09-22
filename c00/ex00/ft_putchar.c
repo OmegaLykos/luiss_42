@@ -6,15 +6,15 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:38:59 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/21 18:03:52 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/09/22 12:35:07 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include <unistd.h>
 
 void ft_putchar(char c)
 {
-	write (1, &c, 1);
+		write (1,&c,1);
 }
 
 /*

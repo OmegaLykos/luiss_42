@@ -6,7 +6,7 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 10:46:58 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/22 10:54:32 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/09/22 12:37:59 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void ft_print_numbers(void)
 }
 
 /*
-int main (void)
+int main(void)
 {
 		ft_print_numbers();
 		return 0;
