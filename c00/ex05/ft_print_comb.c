@@ -6,8 +6,18 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:28:37 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/22 11:42:25 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/09/25 12:58:05 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+# include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1)
+}
+
+void	ft_print_comb(void)
+{
+	int		i;
+}
