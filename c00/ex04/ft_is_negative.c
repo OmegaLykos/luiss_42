@@ -6,27 +6,28 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 10:57:05 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/22 12:38:05 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/09/25 11:52:17 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
-		write(1,&c,1);
+	write (1, &c, 1);
 }
 
-void ft_is_negative(int n)
+void	ft_is_negative(int n)
 {
-		if(n < 0)
-		{
-				ft_putchar('N');
-		}
-		else if(n >= 0)
-		{
-				ft_putchar('P');
-		}
+	if (n < 0)
+	{
+		ft_putchar('N');
+	}
+	else if
+		(n >= 0)
+	{
+		ft_putchar('P');
+}
 }
 
 /*
