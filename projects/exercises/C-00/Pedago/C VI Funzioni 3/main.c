@@ -17,6 +17,9 @@ int main (void)
 
 int fct(void)
 {
+	int i =100; 
+	if (i > 10)
+		return (1);
 	printf("Coucou 42\n");
 	return(42);
 }

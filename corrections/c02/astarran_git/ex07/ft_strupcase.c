@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: astarran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 10:15:03 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/27 10:43:07 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/09/26 17:26:48 by astarran          #+#    #+#             */
+/*   Updated: 2023/09/26 17:36:50 by astarran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strupcase(char *str)
 {
-	write (1, &c, 1);
-}
+	int	i;
 
-void	ft_print_reverse_alphabet(void)
-{
-	int		i;
-
-	i = 122;
-	while (i >= 97)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(i);
-		i--;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
 	}
+	return (str);
 }

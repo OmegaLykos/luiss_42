@@ -6,7 +6,7 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 10:57:05 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/25 11:52:17 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/09/27 10:47:47 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ void	ft_is_negative(int n)
 		ft_putchar('P');
 }
 }
-
-/*
-int main(void)
-{
-		ft_is_negative(5);
-		return 0;
-}
-*/

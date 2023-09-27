@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: astarran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 10:15:03 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/27 10:43:07 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/09/26 17:24:00 by astarran          #+#    #+#             */
+/*   Updated: 2023/09/26 17:24:53 by astarran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	is_upper(char c)
 {
-	write (1, &c, 1);
+	return (c >= 'A' && c <= 'Z');
 }
 
-void	ft_print_reverse_alphabet(void)
+int	ft_str_is_uppercase(char *str)
 {
 	int		i;
 
-	i = 122;
-	while (i >= 97)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(i);
-		i--;
+		if (!is_upper(str[i]))
+			return (0);
+		i++;
 	}
+	return (1);
 }

@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: astarran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 10:15:03 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/27 10:43:07 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/09/26 17:21:14 by astarran          #+#    #+#             */
+/*   Updated: 2023/09/26 18:31:30 by astarran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_str_is_numeric(char *str)
 {
-	write (1, &c, 1);
-}
+	int	i;
 
-void	ft_print_reverse_alphabet(void)
-{
-	int		i;
-
-	i = 122;
-	while (i >= 97)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(i);
-		i--;
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
 	}
+	return (1);
 }

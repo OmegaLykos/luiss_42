@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: astarran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 10:15:03 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/27 10:43:07 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/09/26 17:37:41 by astarran          #+#    #+#             */
+/*   Updated: 2023/09/26 17:39:27 by astarran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	to_lower(char c)
 {
-	write (1, &c, 1);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
 
-void	ft_print_reverse_alphabet(void)
+char	*ft_strlowcase(char *str)
 {
-	int		i;
+	int	i;
 
-	i = 122;
-	while (i >= 97)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(i);
-		i--;
+		str[i] = to_lower(str[i]);
+		i++;
 	}
+	return (str);
 }

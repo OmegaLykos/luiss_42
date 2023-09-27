@@ -1,38 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 11:28:37 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/09/27 11:01:58 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/09/27 10:52:49 by ldi-bell          #+#    #+#             */
+/*   Updated: 2023/09/27 11:08:32 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_comb(void)
+void	print_char(char c)
 {
-	char	a;
-	char	b;
-	char	c;
+	write(1, &c, 1);
+}
 
-	a = '0';
-	while (a <= '7')
+void	int_to_char(int i)
+{
+	int	first;
+	int	second;
+
+	if (i < 10)
+	{
+		print_char('0');
+		print_char(i + '0');
+	}
+	else
+	{
+		first = i / 10;
+		second = i % 10;
+		print_char(first + '0');
+		print_char(second + '0');
+	}
+}
+
+void	ft_print_comb2(void)
+{
+	int	a;
+	int	b;
+
+	a = 0;
+	while (a <= 98)
 	{
 		b = a + 1;
-		while (b <= '8')
+		while (b <= 99)
 		{
-			c = b + 1;
-			while (c <= '9')
+			int_to_char(a);
+			print_char(' ');
+			int_to_char(b);
+			if (a < 98)
 			{
-				write(1, &a, 1);
-				write(1, &b, 1);
-				write(1, &c, 1);
-				if (a != '7')
-					write(1, ", ", 2);
-				c++;
+				print_char(',');
+				print_char(' ');
 			}
 			b++;
 		}
