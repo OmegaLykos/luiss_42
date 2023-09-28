@@ -1,0 +1,16 @@
+patch a -o b < sw.diff
+
+tar -xpf exo2.tar
+
+File 42 -m ft_magic
+
+gcc -Wall -Werror -Wextra
+
+find . -type f \( -name ".DS_Store" -o -name "*.swp" \) -print -delete
+
+find . -type f \( -name ".DS_Store" -o -name "*.swp"  -o name "*.out"\) -print -delete
+
+printf("%lu\n", sizeof(c))
+
+xattr -c
+
