@@ -1,3 +1,5 @@
+///// SHELL 00 /////
+
 patch a -o b < sw.diff
 
 tar -xpf exo2.tar
@@ -6,11 +8,28 @@ File 42 -m ft_magic
 
 gcc -Wall -Werror -Wextra
 
-find . -type f \( -name ".DS_Store" -o -name "*.swp" \) -print -delete
+///// CLEAN /////
 
-find . -type f \( -name ".DS_Store" -o -name "*.swp"  -o name "*.out"\) -print -delete
+find . -type f \( -name ".DS_Store" \) -print -delete
 
-printf("%lu\n", sizeof(c))
+find . -type f \( -name ".DS_Store" -o -name "*.out" \) -print
+
+find . -type f \( -name "*.swo" -o -name "*.swp" \) -print -delete
+
+find . -type d -name ".git" -print
+
+find . -type d -name ".git" -exec rm -rf {} \;
 
 xattr -c
 
+///// ETC /////
+
+tar -cf "nome".tar "nome"
+
+gcc -Wall -Werror -Wextra
+
+-R CheckForbiddenSourceHeader
+
+printf("%lu\n", sizeof(c))
+
+//////////
