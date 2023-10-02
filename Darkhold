@@ -32,6 +32,8 @@ gcc -Wall -Werror -Wextra
 
 printf("%lu\n", sizeof(c))
 
+cat ex*/*.c
+
 //////////
 
 for i in {1..1000}; do
