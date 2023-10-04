@@ -6,7 +6,7 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 10:57:37 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/04 11:22:26 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/10/04 11:38:26 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // FUNZIONE ITERATIVA !
 
-int mul(int a, int b)
+/*int mul(int a, int b)
 {
 	int ret;
 
@@ -39,7 +39,7 @@ int main(void)
 {
 	printf("%d\n", mul(4, -10));
 	return(0);
-}
+}*/
 
 // FUNZIONE RICORSIVA !
 
