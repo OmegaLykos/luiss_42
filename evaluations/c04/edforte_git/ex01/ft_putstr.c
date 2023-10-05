@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: edforte <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 14:50:00 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/05 09:11:58 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/01 10:21:03 by edforte           #+#    #+#             */
+/*   Updated: 2023/10/01 10:25:46 by edforte          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-int	ft_iterative_factorial(int nb)
+void	ft_putstr(char *str)
 {
-	int	i;
-
-	i = nb;
-	if (nb < 0)
-		return (0);
-	if (nb == 0)
-		return (1);
-	while (i > 1)
+	while (*str)
 	{
-		nb = nb * (i - 1);
-		i--;
+		write(1, str, 1);
+		str ++;
 	}
-	return (nb);
 }
-/*
-#include <stdio.h>
-
-int main (void)
-{
-	printf("%i", ft_iterative_factorial(3));
-}
-*/
