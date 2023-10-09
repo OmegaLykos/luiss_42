@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 10:57:05 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/09 18:24:04 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/09 17:52:26 by ldi-bell          #+#    #+#             */
+/*   Updated: 2023/10/09 18:08:11 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,23 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
-void	ft_is_negative(int n)
+void	ft_print_numbers(void)
 {
-	if (n < 0)
+	int	i;
+
+	i = '0';
+	while (i <= '9')
 	{
-		ft_putchar('N');
+		ft_putchar(i);
+		i++;
 	}
-	else if (n >= 0)
-	{
-		ft_putchar('P');
-	}
+}
+
+int	main(void)
+{
+	ft_print_numbers();
+	return (0);
 }

@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gvernare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 10:57:05 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/09 18:24:04 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/05 17:04:18 by gvernare          #+#    #+#             */
+/*   Updated: 2023/10/05 18:04:24 by gvernare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	ft_str_is_printable(char *str)
 {
-	write (1, &c, 1);
-}
+	int	i;
 
-void	ft_is_negative(int n)
-{
-	if (n < 0)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar('N');
+		if (!(str[i] >= 32 && str[i] <= 127))
+			return (0);
+		i++;
 	}
-	else if (n >= 0)
-	{
-		ft_putchar('P');
-	}
+	return (1);
 }

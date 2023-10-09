@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gvernare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 10:57:05 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/09 18:24:04 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/05 17:04:49 by gvernare          #+#    #+#             */
+/*   Updated: 2023/10/08 00:08:46 by gvernare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+char	*ft_strlowcase(char *str)
 {
-	write (1, &c, 1);
-}
+	int	i;
 
-void	ft_is_negative(int n)
-{
-	if (n < 0)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar('N');
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = str[i] + 32;
+		i++;
 	}
-	else if (n >= 0)
-	{
-		ft_putchar('P');
-	}
+	return (str);
 }
