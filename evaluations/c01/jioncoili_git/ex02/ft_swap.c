@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jioncoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 17:38:59 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/09 16:55:22 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/09/27 11:14:22 by jioncoli          #+#    #+#             */
+/*   Updated: 2023/10/09 14:24:44 by jioncoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_swap(int *a, int	*b)
 {
-	write(1, &c, 1);
+	int	ptr;
+
+	ptr = *a;
+	*a = *b;
+	*b = ptr;
 }

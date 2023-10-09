@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdumitru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 17:38:59 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/09 16:55:22 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/02 09:12:28 by mdumitru          #+#    #+#             */
+/*   Updated: 2023/10/04 11:19:00 by mdumitru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_recursive_factorial(int nb)
 {
-	write(1, &c, 1);
+	if (nb == 0)
+		return (1);
+	if (nb < 0)
+		return (0);
+	return (nb * ft_recursive_factorial(nb - 1));
 }

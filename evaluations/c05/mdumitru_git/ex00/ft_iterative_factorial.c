@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mdumitru <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 17:38:59 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/09 16:55:22 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/02 08:28:59 by mdumitru          #+#    #+#             */
+/*   Updated: 2023/10/04 11:24:28 by mdumitru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_iterative_factorial(int nb)
 {
-	write(1, &c, 1);
+	int	i;
+	int	prod;
+
+	prod = 1;
+	i = 1;
+	if (nb < 0)
+		return (0);
+	while (i <= nb)
+	{
+		prod = prod * i;
+		i++;
+	}
+	return (prod);
 }

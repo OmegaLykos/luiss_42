@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jioncoli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 17:38:59 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/09 16:55:22 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/08 14:24:17 by jioncoli          #+#    #+#             */
+/*   Updated: 2023/10/09 12:14:38 by jioncoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	write(1, &c, 1);
+	int	box;
+	int	i;
+	int	len;
+
+	box = 0;
+	len = size -1;
+	i = 0;
+	while (i < size / 2)
+	{
+		box = tab[i];
+		tab[i] = tab[len];
+		tab[len] = box;
+		i++;
+		len--;
+	}
 }
