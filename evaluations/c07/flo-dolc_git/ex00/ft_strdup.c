@@ -3,47 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: flo-dolc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 10:10:10 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/10 09:16:38 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/05 20:51:44 by flo-dolc          #+#    #+#             */
+/*   Updated: 2023/10/05 21:10:53 by flo-dolc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+int	ft_strlen(char *str)
+{
+	int	count;
+
+	count = 0;
+	while (str[count] != '\0')
+		count++;
+	return (count);
+}
 
 char	*ft_strdup(char *src)
 {
-	char	*dest;
-	int		i;
+	char	*dup;
+	int		srclen;
 
-	i = 0;
-	while (src[i])
-		i++;
-	dest = malloc(sizeof(src) * i);
-	i = 0;
-	if (dest == NULL)
-		return (0);
-	else
-	{
-		while (src[i])
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-		return (dest);
-	}
+	srclen = ft_strlen(src);
+	dup = (char *)malloc(sizeof(char) * srclen + 1);
+	return (ft_strcpy(dup, src));
 }
-
-/*int main(void)
-{
-    char    *str;
-    char    *new_str;
-
-    str = "Luigi Bella";
-    new_str = ft_strdup(str);
-    printf("%s\n", new_str);
-}*/

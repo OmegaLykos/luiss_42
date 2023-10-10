@@ -6,7 +6,7 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:18:38 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/09 19:33:28 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/10/10 09:46:22 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	ft_putchar(char c)
 
 void	int_to_char(int i)
 {
-	int first;
-	int second;
+	int	first;
+	int	second;
 
-	if(i < 10)
+	if (i < 10)
 	{
 		ft_putchar('0');
 		ft_putchar(i + '0');
@@ -37,9 +37,9 @@ void	int_to_char(int i)
 }
 
 void	ft_print_comb2(void)
-{ 
-	int a;
-	int b;
+{
+	int	a;
+	int	b;
 
 	a = 0;
 	while (a <= 98)
@@ -61,10 +61,8 @@ void	ft_print_comb2(void)
 	}
 }
 
-int main(void)
+int	main(void)
 {
 	ft_print_comb2();
 	return (0);
 }
-
-
