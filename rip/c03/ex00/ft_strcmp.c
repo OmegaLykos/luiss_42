@@ -6,13 +6,13 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:19:26 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/11 11:32:43 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/10/11 15:06:32 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 

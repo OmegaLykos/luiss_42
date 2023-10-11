@@ -6,7 +6,7 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 12:03:55 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/11 12:16:17 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/10/11 15:08:01 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	unsigned	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while ((s1[i] || s2[i]) && (i < n))

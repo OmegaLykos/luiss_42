@@ -6,7 +6,7 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 12:19:06 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/11 12:53:06 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/10/11 15:11:10 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -32,10 +32,10 @@ char	*ft_strcat(char *dest, char *src)
 
 int	main(void)
 {
-	char *t;
+	char	*t;
 
-	char a[20] = "str";
-	char b[20] = "cat";
+	char	a[20] = "str";
+	char	b[20] = "cat";
 
 	t = ft_strcat(a, b);
 	printf("%s\n", a);
