@@ -5,15 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/02 15:08:49 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/11 13:35:20 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/11 12:19:06 by ldi-bell          #+#    #+#             */
+/*   Updated: 2023/10/11 12:53:06 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 char	*ft_strcat(char *dest, char *src)
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
 
 	i = 0;
 	j = 0;
@@ -27,18 +29,15 @@ char	*ft_strcat(char *dest, char *src)
 	dest[i + j] = '\0';
 	return (dest);
 }
-/*
-#include <stdio.h>
 
-int main()
+int	main(void)
 {
 	char *t;
 
-	char b[20] = "hi there!";
-	char a[20] = "arrhgjfhgfg";
+	char a[20] = "str";
+	char b[20] = "cat";
 
 	t = ft_strcat(a, b);
 	printf("%s\n", a);
 	return (0);
 }
-*/

@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlowercase.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/02 15:08:49 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/11 13:35:20 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/11 09:23:16 by ldi-bell          #+#    #+#             */
+/*   Updated: 2023/10/11 11:09:16 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
-}
-/*
 #include <stdio.h>
 
-int main()
+char	*ft_strlowcase(char *str)
 {
-	char *t;
+	int	i;
 
-	char b[20] = "hi there!";
-	char a[20] = "arrhgjfhgfg";
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
+		i++;
+	}
+	return (str);
+}
 
-	t = ft_strcat(a, b);
-	printf("%s\n", a);
+int	main(void)
+{
+	char	a[] = "minuscolo";
+	char	b[] = "mIsTo";
+	char	c[] = "MAIUSCOLO";
+
+	printf("%s\n", ft_strlowcase(a));
+	printf("%s\n", ft_strlowcase(b));
+	printf("%s\n", ft_strlowcase(c));
 	return (0);
 }
-*/

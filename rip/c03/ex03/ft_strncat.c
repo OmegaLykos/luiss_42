@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   strncat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/02 15:08:49 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/11 13:35:20 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/11 12:57:39 by ldi-bell          #+#    #+#             */
+/*   Updated: 2023/10/11 13:28:57 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+#include <stdio.h>
+
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
+	unsigned int i;
+	unsigned int j;
 
 	i = 0;
 	j = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[j] != '\0')
+	while (src[j] != '\0' && j < nb)
 	{
-		dest[i + j] = src[j];
+		dest[i] = src[j];
+		i++;
 		j++;
 	}
-	dest[i + j] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
-/*
-#include <stdio.h>
 
-int main()
+int	main(void)
 {
-	char *t;
+	char a[4] = "strN";
+	char b[4] = "cat";
 
-	char b[20] = "hi there!";
-	char a[20] = "arrhgjfhgfg";
-
-	t = ft_strcat(a, b);
-	printf("%s\n", a);
+	char *t = ft_strncat(a, b, 4);
+	printf("%s\n", t);
 	return (0);
 }
-*/

@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/02 15:08:49 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/11 13:35:20 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/11 11:19:26 by ldi-bell          #+#    #+#             */
+/*   Updated: 2023/10/11 11:32:43 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
-}
-/*
 #include <stdio.h>
 
-int main()
+int ft_strcmp(char *s1, char *s2)
 {
-	char *t;
+	int	i;
 
-	char b[20] = "hi there!";
-	char a[20] = "arrhgjfhgfg";
-
-	t = ft_strcat(a, b);
-	printf("%s\n", a);
-	return (0);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i++;
+	return (s1[i] - s2[i]);
 }
-*/
+
+int	main(void)
+{
+	printf("%d\n", ft_strcmp("Hello", "Hello1"));
+	printf("%d\n", ft_strcmp("Hello", "He"));
+	printf("%d\n", ft_strcmp("He", "Hello"));
+	printf("%d\n", ft_strcmp("Hello", "Hello"));
+}
