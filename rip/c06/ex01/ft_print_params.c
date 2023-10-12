@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 08:31:19 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/12 16:41:35 by ldi-bell         ###   ########.fr       */
+/*   Created: 2023/10/12 16:00:09 by ldi-bell          #+#    #+#             */
+/*   Updated: 2023/10/12 16:48:12 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <unistd.h>
+
+int	main(int argc, char **argv)
 {
 	int	i;
+	int	j;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	j = 1;
+	while (j < argc)
+	{
+		i = 0;
+		while (argv[j][i])
+		{
+			write(1, &argv[j][i], 1);
+			i++;
+		}
+		write(1, "\n", 1);
+		j++;
+	}
 }
-
-/*
-#include <stdio.h>
-
-int	 main(void)
-{
-	printf("%d\n", ft_strlen("0123456789"));
-}
-*/

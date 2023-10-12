@@ -6,15 +6,15 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 09:51:05 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/12 14:01:09 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:45:23 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int i;
-	int result;
-	int sign;
+	int	i;
+	int	result;
+	int	sign;
 
 	i = 0;
 	result = 0;

@@ -6,7 +6,7 @@
 /*   By: ldi-bell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:10:06 by ldi-bell          #+#    #+#             */
-/*   Updated: 2023/10/12 14:11:39 by ldi-bell         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:44:13 by ldi-bell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -30,4 +30,3 @@ int	main(void)
 	ft_putstr("Hello World!\n");
 }
 */
-
